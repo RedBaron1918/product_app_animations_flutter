@@ -85,6 +85,7 @@ class _IntroPageState extends State<IntroPage> {
                   PageRouteBuilder(
                     pageBuilder: (context, animation, secondaryAnimation) =>
                         const HomePage(),
+                    transitionDuration: const Duration(milliseconds: 600),
                     transitionsBuilder:
                         (context, animation, secondaryAnimation, child) {
                       return SlideTransition(
@@ -132,7 +133,7 @@ class _BuildPage extends StatelessWidget {
                       top: 170,
                       right: 0.0,
                       left: 65.0,
-                      child: TitleAnimation(text: "${intro.text}"),
+                      child: TitleAnimationWidget(text: "${intro.text}"),
                     ),
                     Positioned(
                       top: 200,

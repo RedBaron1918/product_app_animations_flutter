@@ -4,4 +4,5 @@ class ConstColors {
   static get greyColor => const Color(0xFFEFEEEE);
   static get cardBackgroundColor => const Color(0xFFEBE8E8);
   static get titleColor => const Color(0xFF101010);
+  static get cardColor => const Color(0xFFF2F2FC);
 }

@@ -14,16 +14,13 @@ class FadeInImageWidget extends StatelessWidget {
   final double radius;
   @override
   Widget build(BuildContext context) {
-    return CircleAvatar(
-      backgroundColor: Colors.transparent,
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(radius),
-        child: FadeInImage.memoryNetwork(
-          placeholder: kTransparentImage,
-          image: photo,
-          height: height,
-          fit: BoxFit.cover,
-        ),
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(radius),
+      child: FadeInImage.memoryNetwork(
+        placeholder: kTransparentImage,
+        image: photo,
+        height: height,
+        fit: BoxFit.cover,
       ),
     );
   }
