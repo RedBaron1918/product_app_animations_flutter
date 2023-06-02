@@ -1,4 +1,3 @@
-import 'package:app_with_animations/views/home_page.dart';
 import 'package:app_with_animations/views/intro_page.dart';
 import 'package:flutter/material.dart';
 

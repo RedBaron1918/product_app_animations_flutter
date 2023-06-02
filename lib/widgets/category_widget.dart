@@ -1,10 +1,8 @@
 import 'package:app_with_animations/model/category_model.dart';
 import 'package:app_with_animations/model/product_model.dart';
 import 'package:app_with_animations/utils/service.dart';
-import 'package:app_with_animations/widgets/card_widget.dart';
 import 'package:app_with_animations/widgets/category_card_widget.dart';
 import 'package:app_with_animations/widgets/future_widget.dart';
-import 'package:app_with_animations/widgets/list_widget.dart';
 import 'package:app_with_animations/widgets/product_list_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -25,7 +23,6 @@ class _CategoryWidgetState extends State<CategoryWidget>
     CategoryCardModel("home-decoration")
   ];
   CategoryCardModel? _selectedCardModel;
-  final GlobalKey<AnimatedListState> _listKey = GlobalKey<AnimatedListState>();
   late final AnimationController _controller;
   late final Animation<Offset> _animation;
 

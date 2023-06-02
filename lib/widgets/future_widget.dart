@@ -21,10 +21,6 @@ class FutureWidget extends StatelessWidget {
             child: Text('Error: ${snapshot.error}'),
           );
         }
-        if (snapshot.connectionState == ConnectionState.waiting ||
-            snapshot.connectionState == ConnectionState.none) {
-          return const Center(child: CircularProgressIndicator());
-        }
 
         return builder(snapshot);
       },

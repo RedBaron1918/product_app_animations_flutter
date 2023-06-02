@@ -35,7 +35,6 @@ class _DetailPageState extends State<DetailPage> {
   }
 
   int activePage = 0;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -90,7 +89,7 @@ class _DetailPageState extends State<DetailPage> {
               ],
             ),
           ),
-          Positioned(right: 10, top: 10, child: Icon(Icons.abc)),
+          const Positioned(right: 10, top: 10, child: Icon(Icons.abc)),
           Positioned(
             bottom: 0,
             left: 0,
@@ -214,7 +213,7 @@ class CardDetail extends StatelessWidget {
               Expanded(
                   child: MaterialButton(
                 onPressed: () {},
-                child: Text('text'),
+                child: const Text('text'),
               )),
             ],
           )
