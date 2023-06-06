@@ -29,12 +29,14 @@ class CategoryCard extends StatelessWidget {
             borderRadius: BorderRadius.circular(20.0),
           ),
           padding: const EdgeInsets.all(10),
-          child: Text(
-            categoryCardName ?? 'Todas',
-            style: TextStyle(
-                fontSize: 15,
-                fontWeight: FontWeight.w700,
-                color: isSelected ? Colors.white : ConstColors.titleColor),
+          child: Center(
+            child: Text(
+              "$categoryCardName",
+              style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w700,
+                  color: isSelected ? Colors.white : ConstColors.titleColor),
+            ),
           ),
         ),
       ),

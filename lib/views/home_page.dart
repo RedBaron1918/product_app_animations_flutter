@@ -1,3 +1,4 @@
+import 'package:app_with_animations/views/cart_page.dart';
 import 'package:app_with_animations/widgets/category_widget.dart';
 import 'package:app_with_animations/widgets/fade_in_image.dart';
 import 'package:app_with_animations/widgets/search_bar_widget.dart';
@@ -18,16 +19,30 @@ class HomePage extends StatelessWidget {
           text: "Menu",
           textColor: Colors.black,
         ),
-        actions: const [
+        actions: [
           Padding(
-            padding: EdgeInsets.all(10.0),
-            child: CircleAvatar(
-              child: FadeInImageWidget(
-                photo:
-                    "https://scontent.ftbs6-2.fna.fbcdn.net/v/t1.18169-9/1391743_603079143062900_1606433576_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=TfHiKTWsfFIAX8XzOu9&_nc_ht=scontent.ftbs6-2.fna&oh=00_AfCQbKXLcKZYYX5b1xFX4D-vQMrR2cxSoLrBgw7Uhs1Bww&oe=64A01ECA",
-                radius: 90,
-                height: 40,
-              ),
+            padding: const EdgeInsets.all(10.0),
+            child: IconButton(
+              color: Colors.black,
+              onPressed: () {
+                Navigator.of(context).push(
+                  PageRouteBuilder(
+                    pageBuilder: (context, animation, secondaryAnimation) =>
+                        const CartPage(),
+                    transitionDuration: const Duration(milliseconds: 600),
+                    transitionsBuilder:
+                        (context, animation, secondaryAnimation, child) {
+                      return SlideTransition(
+                        position: Tween<Offset>(
+                                begin: const Offset(1.0, 0.0), end: Offset.zero)
+                            .animate(animation),
+                        child: child,
+                      );
+                    },
+                  ),
+                );
+              },
+              icon: const Icon(Icons.shopping_cart),
             ),
           ),
         ],

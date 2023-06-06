@@ -24,7 +24,7 @@ class _TitleAnimationWidgetState extends State<TitleAnimationWidget> {
     return TweenAnimationBuilder(
       key: _key,
       tween: Tween<double>(begin: 0, end: 1),
-      duration: const Duration(milliseconds: 1000),
+      duration: const Duration(milliseconds: 1200),
       builder: (BuildContext context, double value, child) {
         return Opacity(
           opacity: value,

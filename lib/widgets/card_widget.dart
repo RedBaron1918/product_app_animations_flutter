@@ -28,10 +28,13 @@ class CardWidget extends StatelessWidget {
                 SizedBox(
                   width: MediaQuery.of(context).size.width * 0.45,
                   height: 140,
-                  child: FadeInImageWidget(
-                    photo: product!.images![0],
-                    radius: 6,
-                    fit: BoxFit.cover,
+                  child: Hero(
+                    tag: "${product?.title}",
+                    child: FadeInImageWidget(
+                      photo: product!.images![0],
+                      radius: 6,
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
                 const Positioned(top: 8, right: 8, child: HeartIcon())
